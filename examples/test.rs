@@ -1,5 +1,9 @@
-use quantic;
+use quantic::{self, QuanticRunnerImpl};
 
 fn main() {
-	quantic::e();
+	quantic::default()
+		.add(690000000)
+		.add(4200000)
+		.run()
+		.expect("QuanticInternal");
 }
