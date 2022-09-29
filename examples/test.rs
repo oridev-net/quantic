@@ -1,9 +1,10 @@
-use quantic::{self, QuanticRunnerImpl};
+use quantic;
+use quantic::RunnerImpl;
 
 fn main() {
 	quantic::default()
-		.add(690000000)
-		.add(4200000)
+		.add(6900000000)
+		.add(42000000)
 		.run()
 		.expect("QuanticInternal");
 }

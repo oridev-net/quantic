@@ -3,13 +3,13 @@ mod uuid;
 
 use uuid::UUID;
 
-pub struct QuanticScene {
+pub struct Scene {
 	offset: [i32; 3],
 	id: UUID
 }
 
-pub fn default() -> QuanticScene {
-	QuanticScene {
+pub fn default() -> Scene {
+	Scene {
 		offset: [0, 0, 0],
 		id: uuid::generate_UUID()
 	}
