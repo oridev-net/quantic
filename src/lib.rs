@@ -14,31 +14,20 @@ pub struct Runner {
 
 pub trait Run {
     fn run(self) -> Result<(), &'static str>;
+	fn load_nodes(self, nodes: Vec<ecs::Node>) -> Runner;
 }
 
 impl Run for Runner {
-    fn run(mut self) -> Result<(), &'static str> {
-        loop {
-			self.loaded_nodes.push(ecs::Node {
-				transform: datatypes::Transform {
-					position: datatypes::Vec3 {
-						x: 0,
-						y: 0,
-						z: 0
-					},
-					rotation: datatypes::Vec3 {
-						x: 0,
-						y: 100,
-						z: 0
-					},
-					scale: datatypes::Vec3 {
-						x: 0,
-						y: 0,
-						z: 0
-					},
-				}
-			});
-            println!("{:?}", self.loaded_nodes);
-        }
+    fn run(self) -> Result<(), &'static str> {
+        for loaded_node in self.loaded_nodes {
+			println!("{:?}", loaded_node);
+		}
+		Ok(())
     }
+	fn load_nodes(mut self, nodes: Vec<ecs::Node>) -> Runner {
+		for node in nodes {
+			self.loaded_nodes.push(node);
+		}
+		self
+	}
 }

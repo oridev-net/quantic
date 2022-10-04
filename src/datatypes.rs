@@ -18,6 +18,6 @@ pub struct Transform {
 
 impl std::fmt::Debug for Transform {
 	fn fmt(&self, f: &mut std::fmt::Formatter) -> Result<(), std::fmt::Error> {
-		write!(f, "Transform: {{position: {{{:?}}}, rotation: {{{:?}}}, scale: {{{:?}}}}}", self.position, self.rotation, self.scale)
+		write!(f, "{{position: {{{:?}}}, rotation: {{{:?}}}, scale: {{{:?}}}}}", self.position, self.rotation, self.scale)
 	}
 }

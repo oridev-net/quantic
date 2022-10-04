@@ -5,3 +5,5 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "A game engine written in rust for rust and compiles to wasm"
 repository = "https://github.com/Ori-Gon/quantic"
+
+[dependencies]
