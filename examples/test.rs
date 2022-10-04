@@ -1,5 +1,5 @@
 use quantic;
-use quantic::RunnerImpl;
+use quantic::Run;
 
 fn main() {
 	quantic::default()

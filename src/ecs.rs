@@ -1,7 +1,11 @@
-pub struct Scene {
-	offset: [i32; 3],
-}
+use crate::datatypes;
 
 pub struct Node {
-	transform: [i32; 3],
+	pub transform: datatypes::Transform,
+}
+
+impl std::fmt::Debug for Node {
+	fn fmt(&self, f: &mut std::fmt::Formatter) -> Result<(), std::fmt::Error> {
+		write!(f, "Node: {{{:?}}}", self.transform)
+	}
 }

@@ -5,7 +5,3 @@ edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "A game engine written in rust for rust and compiles to wasm"
 repository = "https://github.com/Ori-Gon/quantic"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-[dependencies]
-rand = "0.8.5"
