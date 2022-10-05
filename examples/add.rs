@@ -21,45 +21,8 @@ fn main() {
 					y: 0,
 					z: 0
 				}
-			}
-		}])
-		.load_nodes(vec![quantic::ecs::Node {
-			transform: quantic::datatypes::Transform {
-				position: quantic::datatypes::Vec3 {
-					x: 0,
-					y: 0,
-					z: 0
-				},
-				rotation: quantic::datatypes::Vec3 {
-					x: 0,
-					y: 0,
-					z: 0
-				},
-				scale: quantic::datatypes::Vec3 {
-					x: 0,
-					y: 0,
-					z: 0
-				}
-			}
-		}])
-		.load_nodes(vec![quantic::ecs::Node {
-			transform: quantic::datatypes::Transform {
-				position: quantic::datatypes::Vec3 {
-					x: 0,
-					y: 0,
-					z: 0
-				},
-				rotation: quantic::datatypes::Vec3 {
-					x: 0,
-					y: 0,
-					z: 0
-				},
-				scale: quantic::datatypes::Vec3 {
-					x: 0,
-					y: 0,
-					z: 0
-				}
-			}
+			},
+			script: Box::new(add_mod::Main{})
 		}])
 		.run()
 		.expect("QuanticInternal");

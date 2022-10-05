@@ -3,7 +3,7 @@ use crate::script::Script;
 
 pub struct Node {
 	pub transform: datatypes::Transform,
-	pub script: dyn Script
+	pub script: Box<dyn Script>
 }
 
 impl std::fmt::Debug for Node {
